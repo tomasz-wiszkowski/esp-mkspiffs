@@ -54,7 +54,7 @@ endif
 
 
 VERSION ?= $(shell git describe --always)
-SPIFFS_VERSION := $(shell git -C spiffs describe --tags || echo "unknown")
+SPIFFS_VERSION := 3.4
 BUILD_CONFIG_NAME ?= -generic
 
 OBJ		:= main.o \

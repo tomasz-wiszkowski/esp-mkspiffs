@@ -155,7 +155,7 @@ typedef uint8_t u8_t;
 // Garbage collecting heuristics - weight used for deleted pages.
 #define SPIFFS_GC_HEUR_W_DELET          (5)
 // Garbage collecting heuristics - weight used for used pages.
-#define SPIFFS_GC_HEUR_W_USED           (-1)
+#define SPIFFS_GC_HEUR_W_USED           (0)
 // Garbage collecting heuristics - weight used for time between
 // last erased and erase of this block.
 #define SPIFFS_GC_HEUR_W_ERASE_AGE      (50)
@@ -178,7 +178,7 @@ typedef uint8_t u8_t;
 // logical_page_size - (SPIFFS_OBJ_NAME_LEN + sizeof(spiffs_page_header) +
 // spiffs_object_ix_header fields + at least some LUT entries)
 #ifndef SPIFFS_OBJ_META_LEN
-#define SPIFFS_OBJ_META_LEN             (0)
+#define SPIFFS_OBJ_META_LEN             (4)
 #endif
 
 // Size of buffer allocated on stack used when copying data.
@@ -222,7 +222,7 @@ typedef uint8_t u8_t;
 
 // Enable this if your target needs aligned data for index tables
 #ifndef SPIFFS_ALIGNED_OBJECT_INDEX_TABLES
-#define SPIFFS_ALIGNED_OBJECT_INDEX_TABLES      0
+#define SPIFFS_ALIGNED_OBJECT_INDEX_TABLES      1
 #endif
 
 // Enable this if you want the HAL callbacks to be called with the spiffs struct
